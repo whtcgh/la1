@@ -1,0 +1,14 @@
+{
+    "name": "wt/demo1",
+    "description": "laravel 测试包",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "whtcgh",
+            "email": "2359092648@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
