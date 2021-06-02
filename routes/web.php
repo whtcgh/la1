@@ -21,4 +21,12 @@ Route::get('/', function () {
 
 Route::get('/wt', [Wt::class, 'index']);
 Route::get('/wts', [Wts::class, 'index']);
+
+
 Route::get('/user/index', [UserController::class, 'index']);
+
+
+Route::any('/user/test/{id}', [UserController::class, 'test']);
+Route::any('/user/index1', [UserController::class, 'index1']);
+
+
