@@ -20,15 +20,15 @@ class UserController extends Controller
         $id3 = $request->all();
         var_dump($id3);
         echo '<br>';
-        var_dump($validate);
+        // var_dump($validate);
     }
-    public function test(Request $request, $id)
+    public function test(Request $request)
     {
         $request->validate([
             'id' => 'required|integer|between:1,10',
             // 'v1\.0' => 'required',
         ]);
-        var_dump($id);die;
+        var_dump($request->all());die;
         var_dump($request->getContent());die;
         $validate = Validator::make($request->all(), [
             'id' => 'required|integer|between:1,10',

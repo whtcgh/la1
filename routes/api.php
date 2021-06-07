@@ -14,10 +14,14 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::get('/login', [UserController::class, 'index'] );
+Route::middleware('auth:api')->any('/a', [UserController::class, 'index'] );
+Route::middleware('auth:api')->any('/user', function (Request $request) {
     return $request->user();
 });
-Route::middleware('auth:api')->get('/a', [UserController::class, 'index'] );
+Route::middleware('auth:api')->any('/user/index', [UserController::class, 'index']);
+// Route::any('/user/index1', [UserController::class, 'index1']);
+// Route::any('/user/test/{id}', [UserController::class, 'test']);
 
 
 // Route::get('/user/index', [UserController::class, 'index']);

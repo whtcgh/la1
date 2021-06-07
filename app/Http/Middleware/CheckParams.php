@@ -15,6 +15,12 @@ class CheckParams
      */
     public function handle($request, Closure $next)
     {
+        $params = $request->all();
+        echo '<br>';
+        var_dump($params);
+        echo '<br>';
         return $next($request);
     }
 }
+
+
